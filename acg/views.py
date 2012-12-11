@@ -80,7 +80,8 @@ def json(request):
     args.update(csrf(request))
     pieces = Piece.objects.all()
     args.update({'pieces': pieces}) 
-    return render_to_response('json.txt', args)
+    #args.update({'mimetype': "application/json"})
+    return render_to_response('json.json', args)
 
 def default(request, page):
     args = common_args(False)

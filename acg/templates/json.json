@@ -1,18 +1,19 @@
 {
+  "entries" : [
   {% for piece in pieces %}
-    "{{ piece.slug }}": {
+    {
+      "slug"       : "{{ piece.slug }}",
       "image" : "{% if IS_DEV %}http://127.0.0.1:8000{% else %}http://gallery.art72.org{% endif %}/site_media/media/{{ piece.default_image }}",
-      {% autoescape off %}
       "title"       : "{{ piece.title }}",
       "name"        : "{{ piece.name }}",
       "year"        : "{{ piece.year }}",
       "location"    : "{{ piece.location }}",
       "description" : "{{ piece.description }}"
-      {% endautoescape %}
     {% if forloop.last %}
       }
     {% else %}
       },
     {% endif %}
   {% endfor %}
+]
 }
