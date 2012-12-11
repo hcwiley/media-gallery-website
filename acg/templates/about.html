@@ -1,0 +1,29 @@
+{% extends base_template|default:"base.html" %}
+{% block title %}
+A Community Gallery | About
+{% endblock %}
+{% block center %}
+<div class='top'>
+    <h3>What's going on here?</h3>
+    <br>
+	<p>
+    This is the web portal for an interactive installation for the Super Bowl Media convention in New Orleans, LA.
+	</p>
+	<br>
+	<br>
+	<h7>Would you like to put some art in the gallery?</h7>
+    <a href='/upload'><h4>yes</h4></a>
+	<br>
+	<br>
+	<br>
+	<br>
+    <hr>
+	<br>
+    <div class='next-step'>
+        <h4>Want to see all the work in the gallery?</h4>
+        <br>
+        <a href='/gallery'><h2>yes</h2></a>
+    </div>
+	<br>
+</div>
+{% endblock %}

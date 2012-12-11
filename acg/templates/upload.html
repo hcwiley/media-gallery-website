@@ -1,0 +1,45 @@
+{% extends base_template|default:"base.html" %}
+{% block title %}
+A Community Gallery | Upload
+{% endblock %}
+{% block center %}
+<div class='top'>
+    <h3>Upload your art work with the information below</h3>
+	<p style='font-variant: small-caps;'>fields with * required </p>
+    <br>
+    <div id='piece-form'>
+        <form name='piece_form' enctype='multipart/form-data' method='post' action='/add-work' id='work-form'>
+            {% csrf_token %}
+            <p>
+                Title of the entry *
+            </p>
+            {{ piece_form.title }}
+            <p>
+                Name of the owner of the entry *
+            </p>
+            {{ piece_form.name }}
+            <p>
+                Image *
+            </p>
+            {{ piece_form.default_image }}
+            <p>
+                Description *
+            </p>
+            {{ piece_form.description }}
+            <p>
+                Type of entry *
+            </p>
+            {{ piece_form.type }}
+            <p>
+                Year
+            </p>
+            {{ piece_form.year }}
+            <p>
+                Location
+            </p>
+            {{ piece_form.location }}
+            <br>
+			<h4 id='submit'>I want to submit this work of art to the Community Gallery</h4>
+        </form>
+    </div>
+</div>{% endblock %}
