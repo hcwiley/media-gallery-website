@@ -53,6 +53,8 @@ if not IS_DEV:
         'PASSWORD': 'superduper',                
     }
 }
+    MEDIA_URL = '/media/'
+    STATIC_URL = '/static/'
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
