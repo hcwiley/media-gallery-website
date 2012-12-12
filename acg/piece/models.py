@@ -89,9 +89,6 @@ class Piece(models.Model):
     def __unicode__(self):
         return '%s' % (self.title)
     
-    def getLocation(self):
-        return '%s' % (self.location.replace('\n',','))
-
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super(Piece, self).save(*args, **kwargs)

@@ -1,4 +1,5 @@
 from django.contrib import admin
+#from django.contrib.admin import widgets 
 from piece.models import *
 
 class MyImageAdmin(admin.ModelAdmin):
