@@ -239,7 +239,7 @@ function reinit(){
         window.setTimeout("$('div.top').remove()", 300);
         $('div.upload').css('display', 'block');
     });
-	var input = $('form > *:not(p,br)').not('#submit');
+	var input = $('form > *:not(p,br)').not('#submit').not("#id_date").not("#id_time");
 	//for (var i = 1; i < $(input).length; i++) {
 		//$(input[i]).bind('focus', function(){
 			//sexyScroll($(this).position().top - 200, 20);

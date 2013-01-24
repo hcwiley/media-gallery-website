@@ -84,8 +84,10 @@ class Piece(models.Model):
     default_image = models.ForeignKey(MyImage, null=True, blank=True, related_name='%(app_label)s_%(class)s_default_image')
     slug=models.SlugField(max_length=160,blank=True,editable=False)
     description = models.TextField(null=True, blank=True)
+    date = models.DateField(null=True, blank=True)
+    time = models.CharField(max_length=30, null=True, blank=True)
+    date = models.DateField(null=True, blank=True)
     location = models.TextField(null=True, blank=True)
-    year = models.IntegerField(null=True,blank=True)
     type = models.CharField(max_length=6, choices=TYPES, default='ART')
     theme = models.CharField(max_length=7, choices=THEME, default='GREEN')
     
