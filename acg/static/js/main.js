@@ -240,11 +240,11 @@ function reinit(){
         $('div.upload').css('display', 'block');
     });
 	var input = $('form > *:not(p,br)').not('#submit');
-	for (var i = 1; i < $(input).length; i++) {
-		$(input[i]).bind('focus', function(){
-			sexyScroll($(this).position().top - 200, 20);
-		});
-	}
+	//for (var i = 1; i < $(input).length; i++) {
+		//$(input[i]).bind('focus', function(){
+			//sexyScroll($(this).position().top - 200, 20);
+		//});
+	//}
     $('#submit').bind('click', function(){
         for (var i = 1; i < $(input).length; i++) {
             if ($(input[i]).val() == '' || $(input[i]).val().search(/[ ]+/g) == 0) {

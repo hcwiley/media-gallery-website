@@ -74,17 +74,20 @@ update_thumbs.short_description = "Resave the thumbnails"
 
 
 class Piece(models.Model):
-    TYPES = [ ("ART", "Art"), ("F&D", "Food or Drink"),
-            ("VEN", "Location / Venue"), ('OR', 'Other') ]
+    TYPES = [ ("ART", "Art & Music"), ("FOOD", "Food"),
+            ("EVENT", "Event"), ('DRINK', 'Drink') ]
+
+    THEME = [ ("GREEN", "Green"), ("PURPLE", "Purple"),
+            ("GOLD", "Gold") ]
 
     title = models.CharField(max_length=400)
     default_image = models.ForeignKey(MyImage, null=True, blank=True, related_name='%(app_label)s_%(class)s_default_image')
     slug=models.SlugField(max_length=160,blank=True,editable=False)
     description = models.TextField(null=True, blank=True)
-    name = models.CharField(max_length=400)
     location = models.TextField(null=True, blank=True)
     year = models.IntegerField(null=True,blank=True)
-    type = models.CharField(max_length=4, choices=TYPES, default='OR')
+    type = models.CharField(max_length=6, choices=TYPES, default='ART')
+    theme = models.CharField(max_length=7, choices=THEME, default='GREEN')
     
     def __unicode__(self):
         return '%s' % (self.title)

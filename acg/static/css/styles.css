@@ -46,6 +46,10 @@ textarea {
 	margin: 15px;
 }
 
+#id_location {
+  height: 20px;
+}
+
 input, select {
     height: 25px;
     margin: 2px;

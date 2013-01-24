@@ -7,6 +7,7 @@
       "title"       : "{{ piece.title }}",
       "name"        : "{{ piece.name }}",
       "year"        : "{{ piece.year }}",
+      "theme"       : "{{ piece.theme }}",
       "type"        : "{{ piece.type }}",
       "location"    : "{{ piece.location }}",
       "description" : "{{ piece.description }}"
